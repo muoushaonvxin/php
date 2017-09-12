@@ -1,0 +1,109 @@
+    <?php
+        $db_hosot           = "localhost";
+        $db_user            = "root";
+        $db_pwd             = "root";
+        $db_name            = "saibanchengxu";
+        $db_prefix          = "007_";
+    ?>
+    
+
+php的语法基础
+    
+    PHP, Hypertext Preprocessor, 超文本预处理器, PHP是一种开源的服务器端的脚本程序。
+    PHP 结合了C，Java，Perl，JavaScript 等语法，并且 PHP 也有自己的语法。
+    
+    PHP 与 ASP 一样，也是嵌入到HTML文件中去的。
+    <script> <?php?> <style> <% %>  
+    
+    PHP 文件必须要经过虚拟主机解析之后，才能看到结果
+    
+    PHP 的标记是:  <?php ?>
+    PHP 文件的扩展名是:  .php
+    PHP 访问的路径上不能出现中文字符
+    PHP 中是区分大小写的，但PHP 中关键字和函数名不区分大小写
+    PHP 当中的注释: // 或 #
+    PHP 的多行注释: /**/
+    
+    PHP 变量就是存储数据的临时区域。程序中的所有数据，都是用不同的变量来进行存储的。
+    
+    一，PHP 变量的命名规则
+    变量包含: 字母，数字，下划线
+    变量只能以字母或下划线开头
+    PHP变量前必须要加一个美元符号($), 变量不需要提前定义，用的时候直接赋个初始值即可。
+    PHP当中的程序语句必须使用 ; 结束
+    PHP当中的变量名是区分大小写的，关键字函数名不区分
+    PHP代码程序的输出语句是: echo
+    
+        $name = "zhangsan";
+        
+        <?php 
+            // 变量初始化
+            $name   = "你好";
+            $sex    = "男";
+            $age    = 22;
+            $edu    = NULL;
+            $flag   = true;
+            $school = "北京科技大学";
+            
+            // 构建输出的结构
+            $str = "<h2>$name 的个人资料</h2>";
+            
+            echo $str;    // php 的输出命令
+        ?>
+    
+     PHP数据类型分为三大类: 基本数据类型，复合数据类型，特殊数据类型
+     基本数据类型: String, Integer, Float
+     复合数据类型: Array， Object (自定义对象，MVC，面向对象编程)
+     特殊数据类型: NULL（空型） 和 Resource （资源）
+     
+     1，布尔数据类型: true 和 false,  比如: $isMarried = true
+            提示: true 和 false 是 PHP 的关键字，因此，不区分大小写
+     2. 数值型数据类型:
+            整型和浮点型.
+            比如: $age = 30;    $source = 89.89
+            
+     3, 字符串型
+            用单引号或双引号，引起来的字符，就是字符串
+            如: $name = 'ninhao';   $school = "beijingkejidaxue"; 
+            字符串的第三种方式: Heredoc 方式，作用: 当向处理较长文本时，可以使用该方式
+            语法格式:
+                    $str = Hereedoc<<<    应该是文本的开始标记 ,其后不能加分号结束;
+                        /*
+                            中间的内容随便写 
+                        */
+                    Heredoc;
+             说明:
+                Heredoc 名称可以自己规定， Heredoc 是长文本的结束标记，必须单独一行，不能缩进,必须以分号结束;
+
+     
+     判断变量的数据类型，数据类型转换
+     PHP常量的定义和规则
+     PHP运算符: 算术运算符，字符串运算符，赋值运算符，比较运算符，逻辑运算符，三元运算符，运算符优先级
+     IF 条件判断，switch分支，while循环，do while循环，for循环
+     
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,299 @@
+有红，白，黑三种球若干个，其中红，白球共25个，白，黑球共31个，红，黑球共28个，求这三种球各多少个？
+
+    <?php
+        /*
+            1，定义三个变量，代替三种球, $red  $white  $black
+            2，红球+白球=25
+            3，白球+黑球=31
+            4，红球+黑球=28
+            5，假设红球已知，请问白球怎么算，白球=25-红球
+        
+            枚举思想
+            红球          白球          黑球
+            1               1           1           false
+            2               1           1           false
+            3               1           1           false
+            ......
+            24              1           1           false
+        */
+        
+        /*
+            第一次
+        */
+        $num = 0;
+        for($red=1; $red<25; $red++){
+            for($white=1; $white<25; $white++){
+                for($black=1; $black<28; $black++){
+                    $num++;
+                    if($red+$white == 25 && $white+$black == 31 && $red+$black == 28){
+                        echo "红球: $red,  白球: $white,  黑球: $black";
+                    }
+                }
+            }
+        }
+        
+        echo "<br><h3>一共循环了<font color=red>{$num}次!</h3>";
+    
+        /*
+            第二次循环的次数统计
+        */
+        $num = 0;
+        for($red=1; $red<=25; $red++0
+        {
+            for($white=1; $white<=25-$red; $white++)
+            {
+                for($black=1; $black<=28-$red; $black++)
+                {
+                    $num++;
+                    if($red+$white == 25 && $white+$black == 31 && $red+$black == 28)
+                    {
+                        echo "红球: $red,  白球: $white,  黑球: $black";
+                    }
+                }
+            }
+        }
+        
+        echo "<br><h3>一共循环了<font color=red>{$num}次!</h3>";
+    
+        /* 
+            第三次 
+        */
+        $num = 0;
+        for($red=1; $red<=25; $red++)
+        {
+            $white = 25 - $red;
+            $black = 31 - $white;
+            
+            $num++;
+            if($red+$white == 25 && $white+$black == 31 && $red+$black == 28)
+            {
+                echo "红球: $red,  白球: $white,  黑球: $black";
+            }
+        }
+        echo "<br><h3>一共循环了<font color=red>{$num}次!</h3>";
+    ?>
+    
+    
+    基本数组类型，使用引用传值
+    <?php
+        // 基本数据类型，使用引用传值
+        $a = 10;
+        $b = &$a;       // 将变量$a的地址, 传给了变量$b;
+        $a = 990;       // 对变量$a进行重新赋值
+        echo $b;        // 输出测试变量$b的值
+    ?>
+    
+    
+    数组的概念，数组的分类，数组的创建，多维数组
+    数组操作函数: print_r, unset(), foreach(), array_shift(). arr_pop(), array_unshift(). array_push(). array_values(). count()
+    array_reverse(). list()
+    
+    PHP 全局数组: $GLOBALS,  $_GET[],  $_POST[],  $_SERVER[],  $_FILES 等。
+    
+    数组
+    
+    一，数组的概念
+        数组是一组有序排列的集合，变量是单个值的容器，数组是多个变量的容器
+        PHP 中数组的创建: 
+            $arr = array(10, 20, 30, 40, 50);
+    
+    二，数组的分类
+        PHP 当中数组分为: 一维数组，多维数组，枚举数组，关联数组
+        枚举数组: 就是数组下标是从0开始的正整数比如: $arr = array(10, 20, 30, 40, 50);
+            $arr[1] = 10;
+            $arr[2] = 20;
+            
+        关联数组: 数组的下标是字符串
+            $arr["name"]   = "zhougengsheng";
+            $arr["sex"]    = "nan";
+            $arr["school"] = "beijingkejidaxue";        
+        
+        
+        数组的创建
+            一，使用 [] 号来创建数组
+                $arr[0]  = 10;       // 如果$arr 不存在，则创建一个数组
+                $arr[]   = 20;       // 如果没有指定下标，那么最大下标加1
+                $arr[10] = 100;
+            
+                ------------------------------------------------------------------
+                $arr['name] = "zhangyuze";
+                $arr['contact] = "6454654654";
+                $arr[] = 990;     //  最大下标是 12
+                
+                
+                <?php
+                    $arr[]   = 10;
+                    $arr[10] = 100;
+                    $arr["web_url"] = "http://www.cisco.com"; 
+                    $arr["web_icp"] = "yue4564654654号";
+                    $arr[] = 1000;
+                    print_r($arr);
+                ?>
+                
+            
+            二，使用 array() 函数创建数组
+                $arr = array(10,20,30,40);
+                $arr[4] = 50;
+                $arr[] = 60;
+                $arr["tel"] = "13145678912";
+                
+            
+            三，重载数组下标
+                PHP 中可以重新设置元素的下标，使用"=>" 运算符。
+                $arr = array(
+                    "name" => 10,
+                    "tel"  => "345485678",
+                    10     => 100,
+                    78
+                );
+                
+                在数组中还有两个名字: 键名（指数字下标和字符下标），键值是数据
+            
+                <?php
+                    $arr = array(
+                        "a"  =>  100,
+                        "b"  =>  200,
+                        "c"  =>  300,
+                        10   =>  1000,
+                        900
+                    );
+                    
+                    print_r($arr);
+                ?>
+            
+            PHP 中创建数组的注意事项:
+                语法: $arr = array([key=>]value, ......)
+                说明: 在正常情况下，数组的默认下标是从0开始的，但是，也可以使用 "=>" 运算符重载默认下标
+                参数: key为键名，可以是integer或者string，value可以是任何值。 => 符号叫重载下标
+                注意: 不能使用数组或对象作为键名。
+                
+                $student = array(
+                    "name"   => "Mary",
+                    "age"    => 30,
+                    "salary" => 4000.00
+                );
+        
+    
+    三，多维数组
+    
+        在PHP中，是支持真正的多维数组的，最多可以嵌套60层数组。
+        <?php
+            // 多维数组的创建
+            $arr[0][0] = 100;
+            $arr[0][1] = 200;
+            $arr["contact"]["tel"] = "020-123135468";
+            $arr["contact"]["mobile"] = "65646548797";
+            $arr["contact"]["email"] = "beijing2000@126.com";
+            $arr["contact"]["qq"] = "4123456789";
+            print_r($arr);
+        ?>
+    
+        功能: unset() 删除一个变量的值，或者一个数组的元素，也可以是整个数组。跟JS的delete运算符功能一样。
+        注意: 如果要删除一个数组的话，删除的是数组元素的值，而下标所占的空间依然保留。
+              如果要删除整个数组的话，数组的最大下标将重置为0.
+              $length = count($arr);
+       
+        count()
+        功能: 统计数组中元素的个数，或者对象中属性的个数。
+        语法: int count(mixed $var [, int $mode = 1])
+        参数: $mode 默认值是1，只对一维数组进行个数统计: 如果为1，则可以对多维数组当中的值进行统计。
+        举例: $length = count($arr);
+        
+        <?php
+            function destroy_foo() {
+                global $foo;
+                unset($foo);
+            }
+            
+            $foo = 'bar';
+            destroy_foo();
+            echo $foo;
+        ?>
+        
+        注意: 如果要删除一个数组的话，删除的是数组元素的值
+        <?php
+            // unset() 函数的使用
+            $arr = array(10, 20, 30, 40);
+            $len = count($arr);
+            echo "原始数组的个数: $len";
+            dump($arr);
+            
+            unset($arr[0]);         // 删除下标为0的数组元素
+            $len = count($arr);
+            echo "<hr>现在数组的个数: $len";
+            dump($arr);
+            
+            // PHP中的count() 函数只统计存在元素的个数，而JS当中的length属性会统计所有的元素个数，包括使用delete删除的。 
+            // PHP 和 JS中，数组元素删除后，最大下标依然保留。
+            
+            
+            function dump($arr)
+            {
+                echo "<pre>";
+                print_r($arr);
+                echo "</pre>";
+            }
+        ?>
+        
+        
+        如何将数组当中值取出？
+        foreach() 可以遍历数组
+        功能: 提供了遍历数组的简单方式，且只能用于数组，不能用于其它
+        语法1: $value 是每次循环取出的键值得存放变量。 as 是系统关键字 
+            foreach($arr as $value)
+            {
+                echo $value;        //  输出循环得出的值
+            }
+        
+        语法2: 每次取出数组中的一个元素，将元素的键名赋给 $key, 将键值赋给 $value。 foreach根据判断数组中的所有元素是否都循环完毕，如果 
+        没有找到新的元素，则退出循环。
+            foreach($arr as $key => $value)
+            {
+                echo $arr[$key];
+            }
+        
+            <?php
+                $arr["name"] = "zhougengsheng";
+                $arr["tel"]  = "66546574687";
+                $arr["address"] = "shanghaishixuhuiqu";
+                $arr["post"] = "213123";
+                
+                foreach($arr as $key => $value)
+                {
+                    echo "\$arr[$key] = $value <br/>";
+                }
+                
+                // 使用foreach 来统计数组的长度
+                $n = 0;
+                foreach($arr as $value)
+                {
+                    $n++;
+                }                
+                
+                /****************************************/
+                
+                function dump($arr)
+                {
+                    echo "<pre>";
+                    print_r($arr);
+                    echo "</pre>";
+                }
+            ?>
+    
+    
+    4, 数组元素的删除和增加函数
+        PHP中删除第一个数组元素: array_shift()
+        PHP中删除最后一个数组元素: array_pop()
+        PHP中在最前面添加一个元素: array_unshift()
+        PHP中在最后添加一个元素: array_push()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

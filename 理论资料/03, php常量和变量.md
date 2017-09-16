@@ -33,5 +33,62 @@
             echo $str;
         ?>
     
-    
+        
+        变量的判断: isset() 和 empty()
+        isset(): 判断一个变量是否存在
+        语法格式: bool isset($var);
+        返回值: 变量有值，且值不是NULL的，返回true，否则，返回false
+        $name = NULL;
+        if(!isset($name))
+        {
+            echo "zhen";
+        }else {
+            echo "jia";
+        }
+        
+        empty(): 判断一个变量是否为空
+        语法格式: bool empty($var); 
+        返回值: 如果有值，都返回true，但是如果变量是: 0, "", "0", NULL，false，array()等，都返回 true， 反之都返回false
+        
+        <?php
+            $var = 0;
+            // 结果为true，因为$var 为空
+            if(empty($var)) {
+                echo '$var is either 0 or not set at all';
+            }
+            // 结果为false，因为$var 已设置
+            if(!isset($var)) {
+                echo '$var is not set at all!';
+            }
+        ?>
+        
+        
+        PHP 当中常量的定义
+            常量就是一个永远不变的量，比如: 圆周率，动力系统
+            $a = 100;
+            $a += 10;
+            
+            语法格式: define(name, value[,flag])
+            参数说明:
+                name:  指常量的名称，常量名称放在引导中;
+                value: 指常量的值或数据;
+                flag:  可选参数，设置常量是不是大小写敏感，默认为false，区分大小写
+                
+                
+        举例:
+            
+            <?php
+                // 定义变量
+                define("DB_HOST", "localhost");
+                define("DB_USER", "root");
+                define("DB_PWD", "root");
+                // 输出常量
+                $str = "<h2>MySQL数据库的配置信息</h2>";
+                $str .= "主机名: ".DB_HOST;    
+                $str .= "<br>MySQL的用户: ".DB_USER;
+                echo $str;
+            ?>
+            
+            
+            
     

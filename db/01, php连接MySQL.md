@@ -1,0 +1,76 @@
+第一步: 连接到MySQL 数据库服务器
+第二步: 选择要操作的数据库
+第三步: 设置当前环境的显示字符集
+        set names utf8;
+第四步: 执行SQL 语句，对数据表进行查询
+
+
+    第一步: 连接MySQL数据库服务器  mysql_connect()
+    语法结构: $link = mysql_connect($db_host, $db_user, $db_pwd)
+    参数说明:
+        $db_host: 指定要连接的MySQL服务器的主机
+        $db_user: 指定用户名
+        $db_pwd:  指定用户密码
+    返回值: 如果连接MySQL成功，将返回一个资源标识符或者一个资源的数据类型 $link, 如果连接失败，返回false
+    注意: 资源类型的数据，转成布尔型，一律为true。
+    网站上线一定要屏蔽 PHP 的错误信息显示，使用@符号
+    
+        <?php
+            // 定义变量
+            $db_host = "localhost";
+            $db_user = "root";
+            $db_pwd  = "root";
+            // 连接MySQL 数据库
+            $link = @mysql_connect($db_host, $db_user, $db_pwd);
+        ?>
+        
+        mysql_error() 
+        语法: string mysql_error();
+        功能: 显示上一次MySQL 的出错文本信息
+        
+    
+    举例:
+    
+        <?php
+            // 定义变量
+            $db_host = "localhost";
+            $db_user = "root";
+            $db_pwd  = "root";
+            // 连接MySQL 数据库
+            $link = mysql_connect($db_host, $db_user, $db_pwd);
+            // 判断是否连通 MySQL
+            if($link){
+                echo "MySQL 服务器连通成功!";
+            }else {
+                echo "MySQL 服务器连接失败!".mysql_error();
+            }
+        ?>
+    
+    
+    第二步: 选择当前要操作的数据库
+        
+        <?php
+            
+        ?>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

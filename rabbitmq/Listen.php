@@ -35,13 +35,13 @@ $queue->declareQueue();
 $queue->bind($e_name, $k_route);
 
 while (true){
-	$messages = $queue->get(AMQP_AUTOACK); // 非阻塞模式
-	if($messages !== false){
-		//阻塞：做某件事情，直到完成，除非超时
-		//非阻塞：尝试做，如果不能做，就不做（直接返回），如果能做，就做。
-		$receive = chop($messages->getBody());   //右侧移除空格
-		echo $receive."\n";
-	}
+    $messages = $queue->get(AMQP_AUTOACK); // 非阻塞模式
+    if($messages !== false){
+        //阻塞：做某件事情，直到完成，除非超时
+        //非阻塞：尝试做，如果不能做，就不做（直接返回），如果能做，就做。
+        $receive = chop($messages->getBody());   //右侧移除空格
+        echo $receive."\n";
+    }
 }
 
 ?>

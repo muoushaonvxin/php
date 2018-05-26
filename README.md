@@ -1,4 +1,8 @@
-# php在linux下的编译安装方法
+## php在linux下的编译安装方法
+
+<br>
+
+<br>
 
 ```shell
 [root@zhangyz php-5.6.31]# ./configure --prefix=/usr/local/php5 \

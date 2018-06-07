@@ -1,3 +1,5 @@
+将ThinkPHP文件拷贝到/web/ceshi目录下然后编辑index.php文件
+
 ```shell
 [root@zhangyz ceshi]# vim index.php
 ```
@@ -32,3 +34,7 @@ require './ThinkPHP/ThinkPHP.php';
 ?>
 
 ```
+
+编辑完成之后需要打开浏览器去进行访问 http://192.168.1.1:86/index.php/home/index
+
+![thinkphp01](pic/thinkphp01.png)

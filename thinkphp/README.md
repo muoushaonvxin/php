@@ -35,6 +35,6 @@ require './ThinkPHP/ThinkPHP.php';
 
 ```
 
-编辑完成之后需要打开浏览器去进行访问 http://192.168.1.1:86/index.php/home/index
+编辑完成之后需要打开浏览器去进行访问 http://192.168.1.1:86/index.php
 
 ![thinkphp01](pic/thinkphp01.png)

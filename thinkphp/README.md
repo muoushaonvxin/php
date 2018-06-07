@@ -33,3 +33,6 @@ require './ThinkPHP/ThinkPHP.php';
 [root@zhangyz ceshi]# ls
 Application  index.php  ThinkPHP
 ```
+
+ThinkPHP不但会自动生成一个Application的目录还会在Application/Home/Controller下生成一个IndexControoler.class.php的文件, 这个文件就是访问该项目的入口控制器文件.
+

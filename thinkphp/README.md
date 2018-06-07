@@ -38,3 +38,9 @@ require './ThinkPHP/ThinkPHP.php';
 编辑完成之后需要打开浏览器去进行访问 http://192.168.1.1:86/index.php
 
 ![thinkphp01](pic/thinkphp01.png)
+
+在当前目录下执行查看命令可以看到该框架自动帮忙生成了一个叫Application的文件夹
+```shell
+[root@zhangyz ceshi]# ls
+Application  index.php  ThinkPHP
+```

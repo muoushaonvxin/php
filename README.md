@@ -43,4 +43,7 @@
 --without-pear \
 --with-gettext \
 --with-mime-magi
+[root@zhangyz php-5.6.31]# make
+[root@zhangyz php-5.6.31]# make test
+[root@zhangyz php-5.6.31]# make install 
 ```

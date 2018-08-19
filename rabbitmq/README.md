@@ -1,5 +1,7 @@
 ### linux下安装amqp扩展模块
 
+<br/>
+
 以下错误是php解释器没有安装连接rabbitmq的连接包
 
 ```shell

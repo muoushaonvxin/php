@@ -26,3 +26,15 @@ Saving to: “phpredis-2.2.4.tar.gz”
 [root@zhangyz phpredis-2.2.4]# 
 ```
 
+#### 接下来进行编译安装, 指定编译安装的路径
+
+```shell
+[root@zhangyz phpredis-2.2.4]# /usr/local/php5/bin/phpize 
+Configuring for:
+PHP Api Version:         20131106
+Zend Module Api No:      20131226
+Zend Extension Api No:   220131226
+[root@zhangyz phpredis-2.2.4]# ./configure --with-php-config=/usr/local/php5/bin/php-config 
+[root@zhangyz phpredis-2.2.4]# make 
+[root@zhangyz phpredis-2.2.4]# make install
+```

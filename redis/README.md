@@ -1,6 +1,8 @@
 为编译安装的php解释器添加redis模块的方法
 
-#### 首先下载所需要的额外安装包
+
+#### 首先下载所需要的额外安装包并且进行解压
+
 ```shell
 [root@zhangyz ~]# wget https://github.com/phpredis/phpredis/archive/2.2.4.tar.gz -O phpredis-2.2.4.tar.gz
 --2018-09-25 11:20:59--  https://github.com/phpredis/phpredis/archive/2.2.4.tar.gz

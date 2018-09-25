@@ -3,7 +3,7 @@
 <br/>
 
 
-#### 首先下载所需要的额外安装包并且进行解压
+1.首先下载所需要的额外安装包并且进行解压
 
 ```shell
 [root@zhangyz ~]# wget https://github.com/phpredis/phpredis/archive/2.2.4.tar.gz -O phpredis-2.2.4.tar.gz
@@ -28,7 +28,7 @@ Saving to: “phpredis-2.2.4.tar.gz”
 [root@zhangyz phpredis-2.2.4]# 
 ```
 
-#### 接下来进行编译安装, 指定编译安装的路径
+2.接下来进行编译安装, 指定编译安装的路径
 
 ```shell
 [root@zhangyz phpredis-2.2.4]# /usr/local/php5/bin/phpize 
@@ -62,11 +62,11 @@ No tests were run.
 Installing shared extensions:     /usr/local/php5/lib/php/extensions/no-debug-zts-20131226/
 ```
 
-编辑php.ini文件引入redis.so模块让php进行加载
+3.编辑php.ini文件引入redis.so模块让php进行加载
 
 ```shell
 [root@zhangyz ~]# vim /usr/local/php5/etc/php.ini
 extension = /usr/local/php5/lib/php/extensions/no-debug-zts-20131226/redis.so
 ```
 
-保存完毕重启apache让配置生效即可.
+4.保存完毕重启apache让配置生效即可.

@@ -67,3 +67,4 @@ Installing shared extensions:     /usr/local/php5/lib/php/extensions/no-debug-zt
 extension = /usr/local/php5/lib/php/extensions/no-debug-zts-20131226/redis.so
 ```
 
+保存完毕重启apache让配置生效即可.

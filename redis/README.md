@@ -59,3 +59,11 @@ No tests were run.
 [root@zhangyz phpredis-2.2.4]# make install 
 Installing shared extensions:     /usr/local/php5/lib/php/extensions/no-debug-zts-20131226/
 ```
+
+编辑php.ini文件引入redis.so模块让php进行加载
+
+```shell
+[root@zhangyz ~]# vim /usr/local/php5/etc/php.ini
+extension = /usr/local/php5/lib/php/extensions/no-debug-zts-20131226/redis.so
+```
+

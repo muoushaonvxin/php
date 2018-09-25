@@ -35,6 +35,27 @@ PHP Api Version:         20131106
 Zend Module Api No:      20131226
 Zend Extension Api No:   220131226
 [root@zhangyz phpredis-2.2.4]# ./configure --with-php-config=/usr/local/php5/bin/php-config 
-[root@zhangyz phpredis-2.2.4]# make 
-[root@zhangyz phpredis-2.2.4]# make install
+[root@zhangyz phpredis-2.2.4]# make test
+
+Build complete.
+Don't forget to run 'make test'.
+
+
+=====================================================================
+PHP         : /usr/local/php5/bin/php 
+PHP_SAPI    : cli
+PHP_VERSION : 5.6.37
+ZEND_VERSION: 2.6.0
+PHP_OS      : Linux - Linux zhangyz 2.6.32-696.6.3.el6.x86_64 #1 SMP Wed Jul 12 14:17:22 UTC 2017 x86_64
+INI actual  : /usr/src/phpredis-2.2.4/tmp-php.ini
+More .INIs  :  
+CWD         : /usr/src/phpredis-2.2.4
+Extra dirs  : 
+VALGRIND    : Not used
+=====================================================================
+TIME START 2018-09-25 03:42:35
+=====================================================================
+No tests were run.
+[root@zhangyz phpredis-2.2.4]# make install 
+Installing shared extensions:     /usr/local/php5/lib/php/extensions/no-debug-zts-20131226/
 ```

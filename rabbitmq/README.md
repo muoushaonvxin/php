@@ -25,7 +25,7 @@ configure: error: Please reinstall the librabbitmq distribution itself or (re)in
 [root@zhangyz ~]# tar zxf amqp-1.6.1.tgz
 [root@zhangyz ~]# cd amqp-1.6.1
 [root@zhangyz ~]# /usr/local/php5/bin/phpize
-[root@zhangyz amqp-1.6.1]# ./configure --with-php-config=/usr/local/php/bin/php-config --with-amqp --with-librabbitmq-dir=/usr/local/rabbitmq-c-0.7.1
+[root@zhangyz amqp-1.6.1]# ./configure --with-php-config=/usr/local/php5/bin/php-config --with-amqp --with-librabbitmq-dir=/usr/local/rabbitmq-c-0.7.1
 [root@zhangyz amqp-1.6.1]# make 
 [root@zhangyz amqp-1.6.1]# make install
 ```
@@ -33,13 +33,13 @@ configure: error: Please reinstall the librabbitmq distribution itself or (re)in
 在php.ini文件当中添加所需要的扩展模块
 
 ```shell
-[root@zhangyz ~]# vim /usr/local/php/etc/php.ini
+[root@zhangyz ~]# vim /usr/local/php5/etc/php.ini
 ```
 
 最后添加一行
 
 ```shell
-extension = /usr/local/php/lib/php/extensions/no-debug-non-zts-20100525/amqp.so
+extension = /usr/local/php5/lib/php/extensions/no-debug-non-zts-20100525/amqp.so
 ```
 
 添加完成之后重启apache或nginx

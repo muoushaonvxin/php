@@ -19,7 +19,7 @@ HTTP request sent, awaiting response... 200 OK
 Length: unspecified [application/x-gzip]
 Saving to: “phpredis-2.2.4.tar.gz”
 
-    [    <=>                                                                                                                                                                                     ] 122,063      187K/s   in 0.6s    
+[<=====================================================================>] 122,063      187K/s   in 0.6s    
 
 2018-09-25 11:21:01 (187 KB/s) - “phpredis-2.2.4.tar.gz” saved [122063]
 

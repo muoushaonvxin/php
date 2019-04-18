@@ -12,6 +12,12 @@
 [root@zhangyz gd]# make
 [root@zhangyz gd]# make test
 [root@zhangyz gd]# make install
+
+# 如果上述编译方法图片不能成功展示，可以使用下面的方法来重新进行编译安装
+[root@zhangyz gd]# ./configure --with-php-config=/usr/local/php5/bin/php-config --with-png-dir=/usr/include/png --with-freetype-dir=/usr/include/freetype2/ --with-jpeg-dir=/usr/include/ --with-gd
+[root@zhangyz gd]# make
+[root@zhangyz gd]# make test
+[root@zhangyz gd]# make install
 ```
 
 接下来，一套流程走完，然后重启apache服务器在打开原来用php写的网站图片就可以正常显示出来了

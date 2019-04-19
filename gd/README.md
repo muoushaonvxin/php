@@ -17,6 +17,10 @@
 ### 如果上述编译方法图片不能成功展示，可以使用下面的方法来重新进行编译安装
 
 ```
+[root@zhangyz ~]# cd /usr/local/src/php-5.6.37
+[root@zhangyz php-5.6.37]# cd ext/gd/
+[root@zhangyz gd]# /usr/local/php5/bin/phpize
+[root@zhangyz gd]# yum -y install libpng libpng-devel
 [root@zhangyz gd]# ./configure --with-php-config=/usr/local/php5/bin/php-config --with-png-dir=/usr/include/png --with-freetype-dir=/usr/include/freetype2/ --with-jpeg-dir=/usr/include/ --with-gd
 [root@zhangyz gd]# make
 [root@zhangyz gd]# make test

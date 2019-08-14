@@ -25,3 +25,8 @@ Zend Extension Api No:   220131226
 [root@zhangyz memcache-2.2.7]# make install
 Installing shared extensions:     /usr/local/php5/lib/php/extensions/no-debug-zts-20131226/
 ```
+
+
+php函数调用手册官方网站 
+
+https://www.php.net/manual/zh

@@ -34,9 +34,8 @@ https://www.php.net/manual/zh
 
 Memcache函数所有的方法列表如下：
 
------------------------
 | 调用方法 | 作用说明 |
------------------------
+|----------|------------|
 | Memcache::add | 添加一个值，如果已经存在，则返回false | 
 Memcache::addServer – 添加一个可供使用的服务器地址 
 Memcache::close – 关闭一个Memcache对象 

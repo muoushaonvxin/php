@@ -82,3 +82,19 @@ Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
     with XCache Cacher v3.2.0, Copyright (c) 2005-2014, by mOo
 ```
 
+创建 xcache 的web显示界面
+
+```shell
+[root@zhangyz ~]# mkdir /data/www/blog/xcache/
+[root@zhangyz ~]# cp -r /usr/local/src/xcahe-3.2.0/htdocs /data/www/blog/xcache
+[root@zhangyz ~]# cd /data/www/blog/xcache/htdocs
+[root@zhangyz ~]# ll
+total 28
+drwxr-xr-x 4 root root 4096 Aug 15 14:38 cacher
+drwxr-xr-x 3 root root 4096 Aug 15 14:38 common
+-rw-r--r-- 1 root root  425 Aug 15 14:38 config.default.php
+-rw-r--r-- 1 root root 1867 Aug 15 14:38 config.example.php
+drwxr-xr-x 3 root root 4096 Aug 15 14:38 coverager
+drwxr-xr-x 3 root root 4096 Aug 15 14:38 diagnosis
+-rw-r--r-- 1 root root  185 Aug 15 14:38 index.php
+```

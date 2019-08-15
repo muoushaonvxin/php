@@ -98,3 +98,26 @@ drwxr-xr-x 3 root root 4096 Aug 15 14:38 coverager
 drwxr-xr-x 3 root root 4096 Aug 15 14:38 diagnosis
 -rw-r--r-- 1 root root  185 Aug 15 14:38 index.php
 ```
+
+
+创建 xcache 的apache配置
+
+```shell
+[root@zhangyz ~]# vim /usr/local/apache/conf/httpd.conf
+Listen 10200
+<VirtualHost *:10200>
+    DocumentRoot "/data/www/blog/xcache/htdocs"
+    ServerName 192.168.1.1
+    ErrorLog "logs/xcache-error_log"
+    CustomLog "logs/xcache-access_log" common
+    <Directory "/data/www/blog/xcache/htdocs">
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Methods "OPTIONS,GET,POST"
+        Header set Access-Control-Allow-Headers "Content-Type"
+    </Directory>
+</VirtualHost>
+```

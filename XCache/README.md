@@ -35,5 +35,37 @@ Installing shared extensions:     /usr/local/php5/lib/php/extensions/no-debug-zt
 接下来编辑配置文件, 引入 xcache.so
 
 ```shell
+[root@zhangyz ~]# vim /usr/local/php5/etc/php.ini
+[xcache-common]
+extension=/usr/local/php5/lib/php/extensions/no-debug-zts-20131226/xcache.so
 
+[xcache.admin]
+xcache.admin.enable_auth = On
+xcache.admin.user = "xcache"
+xcache.admin.pass = "e10adc3949ba59abbe56e057f20f883e"
+
+[xcache]
+xcache.shm_scheme = "mmap"
+xcache.size = 512M
+xcache.count = 1
+xcache.slots = 8k
+xcache.ttl = 0
+xcache.gc_interval = 0
+xcache.var_size = 4M
+xcache.var_count = 1
+xcache.var_slots = 8K
+xcache.var_ttl = 0
+xcache.var_maxttl = 0
+xcache.var_gc_interval = 300
+xcache.test = Off
+xcache.readonly_protection = On
+xcache.mmap_path = "/tmp/xcache"
+xcache.coredump_directory = ""
+xcache.cacher = On
+xcache.stat = On
+xcache.optimizer = Off
+
+[xcache.coverager]
+xcache.coverager = On
+xcache.coveragedump_directory = ""
 ```

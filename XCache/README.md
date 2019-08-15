@@ -107,7 +107,6 @@ drwxr-xr-x 3 root root 4096 Aug 15 14:38 diagnosis
 Listen 10200
 <VirtualHost *:10200>
     DocumentRoot "/data/www/blog/xcache/htdocs"
-    ServerName 192.168.1.1
     ErrorLog "logs/xcache-error_log"
     CustomLog "logs/xcache-access_log" common
     <Directory "/data/www/blog/xcache/htdocs">

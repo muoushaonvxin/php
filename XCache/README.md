@@ -69,3 +69,16 @@ xcache.optimizer = Off
 xcache.coverager = On
 xcache.coveragedump_directory = ""
 ```
+
+创建缓存文件
+
+```shell
+[root@zhangyz ~]# touch /tmp/xcache
+[root@zhangyz ~]# /usr/local/php5/bin/php -v
+PHP 5.6.31 (cli) (built: Oct 30 2017 13:29:02) 
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+    with XCache v3.2.0, Copyright (c) 2005-2014, by mOo
+    with XCache Cacher v3.2.0, Copyright (c) 2005-2014, by mOo
+```
+

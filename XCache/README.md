@@ -31,3 +31,9 @@ more information, such as the ld(1) and ld.so(8) manual pages.
 ----------------------------------------------------------------------
 Installing shared extensions:     /usr/local/php5/lib/php/extensions/no-debug-zts-20131226/
 ```
+
+接下来编辑配置文件, 引入 xcache.so
+
+```shell
+
+```

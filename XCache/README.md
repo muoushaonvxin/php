@@ -85,7 +85,7 @@ Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
 创建 xcache 的web显示界面
 
 ```shell
-[root@zhangyz ~]# mkdir /data/www/blog/xcache/
+[root@zhangyz ~]# mkdir -pv /data/www/blog/xcache/
 [root@zhangyz ~]# cp -r /usr/local/src/xcahe-3.2.0/htdocs /data/www/blog/xcache
 [root@zhangyz ~]# cd /data/www/blog/xcache/htdocs
 [root@zhangyz ~]# ll

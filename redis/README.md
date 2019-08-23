@@ -70,3 +70,11 @@ extension = /usr/local/php5/lib/php/extensions/no-debug-zts-20131226/redis.so
 ```
 
 4.保存完毕重启apache让配置生效即可.
+
+
+
+redis当中的数据类型
+
+| Redis数据类型 | 存储的值 | 读写能力 |
+---------------------------------------
+| String      | 可以是字符串,整数或浮点,统称为元素 | 对字符串操作对整数加减 |

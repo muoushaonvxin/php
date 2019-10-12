@@ -1,8 +1,11 @@
 
 ### swoole管理包工具的位置
 
+<br/>
 
 * http://pecl.php.net/package/swoole
+
+swoole是php的网络通讯引擎，是用c语言实现的php底层扩展
 
 ```shell
 [root@zhangyz ~]# tar -xf swoole-4.2.1.tgz 

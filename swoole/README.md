@@ -4,6 +4,7 @@
 <br/>
 
 * http://pecl.php.net/package/swoole
+* https://wiki.swoole.com
 
 swoole是php的网络通讯引擎，是用c语言实现的php底层扩展
 

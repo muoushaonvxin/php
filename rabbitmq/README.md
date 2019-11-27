@@ -21,6 +21,7 @@ configure: error: Please reinstall the librabbitmq distribution itself or (re)in
 [root@zhangyz rabbitmq-c-0.7.1]# ./configure --prefix=/usr/local/rabbitmq-c-0.7.1
 [root@zhangyz rabbitmq-c-0.7.1]# make && make install
 
+[root@zhangyz ~]# yum install autoconf gcc gcc-c++ cmake librabbitmq-devel librabbitmq
 [root@zhangyz ~]# wget https://pecl.php.net/get/amqp-1.6.1.tgz
 [root@zhangyz ~]# tar zxf amqp-1.6.1.tgz
 [root@zhangyz ~]# cd amqp-1.6.1

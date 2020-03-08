@@ -4,6 +4,11 @@
 要么从新编译一边，要么想别的办法，查询到php支持额外编译安装所需要的扩展，方法如下
 
 ```shell
+[root@zhangyz ~]# yum install libxml2 libxml2-devel openssl openssl-devel bzip2 bzip2-devel libcurl libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel zlib zlib-devel glibc glibc-devel glib2 glib2-devel ncurses curl gdbm-devel db4-devel libXpm-devel libX11-devel gd-devel gmp-devel expat-devel xmlrpc-c xmlrpc-c-devel libicu-devel libmcrypt-devel libmemcached-devel
+```
+
+
+```shell
 [root@zhangyz ~]# cd /usr/local/src/php-5.6.37
 [root@zhangyz php-5.6.37]# cd ext/gd/
 [root@zhangyz gd]# /usr/local/php5/bin/phpize

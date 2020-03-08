@@ -10,6 +10,10 @@
 #### 编译安装libzip
 
 ```shell
-
+[root@zhangyz ~]# wget https://nih.at/libzip/libzip-1.2.0.tar.gz
+[root@zhangyz ~]# tar -zxvf libzip-1.2.0.tar.gz
+[root@zhangyz libzip-1.2.0]# cd libzip-1.2.0
+[root@zhangyz libzip-1.2.0]# ./configure
+[root@zhangyz libzip-1.2.0]# make && make install
 ```
 

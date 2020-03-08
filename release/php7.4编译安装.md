@@ -15,7 +15,5 @@
 [root@zhangyz libzip-1.2.0]# cd libzip-1.2.0
 [root@zhangyz libzip-1.2.0]# ./configure --=1-prefix=/usr/local/libzip
 [root@zhangyz libzip-1.2.0]# make && make install
-[root@zhangyz libzip-1.2.0]# echo "export PATH=$PATH:/usr/local/libzip/bin" >> /etc/profile.d/libzip.sh
-[root@zhangyz libzip-1.2.0]# chmod +x /etc/profile.d/libzip.sh 
-[root@zhangyz libzip-1.2.0]# . /etc/profile.d/libzip.sh
+[root@zhangyz libzip-1.2.0]# export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig/"
 ```
